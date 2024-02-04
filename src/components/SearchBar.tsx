@@ -16,7 +16,7 @@ export default function SearchBar() {
       onKeyDown={handleDivClick}
       role="presentation"
     >
-      <div className="relative h-12 border-2 w-fit border-ternary ">
+      <div className="relative h-12 border-2 w-fit border-secondary ">
         <div className="flex relative flex-row w-full h-full gap-2 bg-primary p-2 z-30 hover:cursor-pointer">
           <img src="/magnifyingglass.svg" alt="Search icon" />
           <input
@@ -25,7 +25,7 @@ export default function SearchBar() {
             ref={inputRef}
           />
         </div>
-        <div className="absolute w-full h-full bg-ternary top-1 left-1 z-0" />
+        <div className="absolute w-full h-full bg-secondary top-1 left-1 z-0" />
       </div>
     </div>
   );

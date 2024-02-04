@@ -7,6 +7,25 @@ export default {
         primary: "#E26EE5",
         secondary: "#7E30E1",
         ternary: "#49108B",
+        background: "#F3F8FF",
+        backgroundSecond: "#F4EBFF",
+      },
+      fontFamily: {
+        Compagnon: ["Compagnon-medium"],
+      },
+      width: {
+        "custom-500": "500px",
+        "custom-600": "600px",
+        "custom-700": "700px",
+      },
+      height: {
+        "custom-450": "450px",
+        "custom-500": "500px",
+        "custom-600": "600px",
+        "custom-700": "700px",
+      },
+      backgroundImage: {
+        maskBackground: "url('../assets/mask-background.svg')",
       },
     },
   },
