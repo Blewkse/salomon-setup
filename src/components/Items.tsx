@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import ItemCase from "./ItemCase.tsx";
 
 import headsetBackgroundImage from "../assets/headset-background.svg";
@@ -21,7 +21,11 @@ import sticksBackgroundImage from "../assets/sticks-background.svg";
 import sticksItemSticker from "../assets/sticks-sticker.svg";
 import sticksPhotoImage from "../assets/sticks-image.png";
 
+import CategoryContext from "../hooks/context/CategoryContext.ts";
+
 export default function Items() {
+  const categoryContext = useContext(CategoryContext);
+
   return (
     <div className=" relative flex items-end justify-center flex-row w-custom-700 h-custom-450 ">
       <div className="flex flex-col basis-4/5 h-full">
@@ -30,11 +34,13 @@ export default function Items() {
             backgroundImage={headsetBackgroundImage}
             itemSticker={headsetItemSticker}
             photoImage={headsetPhotoImage}
+            onClick={() => categoryContext?.setFilterCategory("Headset")}
           />
           <ItemCase
             backgroundImage={maskBackgroundImage}
             itemSticker={maskItemSticker}
             photoImage={maskPhotoImage}
+            onClick={() => categoryContext?.setFilterCategory("Mask")}
           />
         </div>
         <div className="flex flex-row w-full basis-7/12">
@@ -42,11 +48,13 @@ export default function Items() {
             backgroundImage={shoesBackgroundImage}
             itemSticker={shoesItemSticker}
             photoImage={shoesPhotoImage}
+            onClick={() => categoryContext?.setFilterCategory("Shoes")}
           />
           <ItemCase
             backgroundImage={skisBackgroundImage}
             itemSticker={skisItemSticker}
             photoImage={skisPhotoImage}
+            onClick={() => categoryContext?.setFilterCategory("Skis")}
           />
         </div>
       </div>
@@ -55,6 +63,7 @@ export default function Items() {
           backgroundImage={sticksBackgroundImage}
           itemSticker={sticksItemSticker}
           photoImage={sticksPhotoImage}
+          onClick={() => categoryContext?.setFilterCategory("Sticks")}
         />
       </div>
     </div>

@@ -4,12 +4,14 @@ type Props = {
   backgroundImage: string;
   itemSticker: string;
   photoImage: string;
+  onClick: () => void;
 };
 
 export default function ItemCase({
   backgroundImage,
   itemSticker,
   photoImage,
+  onClick,
 }: Props) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -25,6 +27,8 @@ export default function ItemCase({
       style={divStyle}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onMouseDown={() => onClick()}
+      role="presentation"
     >
       <img src={itemSticker} alt="sticker" className="z-10" />
       <img

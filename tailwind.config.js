@@ -27,6 +27,12 @@ export default {
       backgroundImage: {
         maskBackground: "url('../assets/mask-background.svg')",
       },
+      inset: {
+        "1/10": "10%",
+      },
+      spacing: {
+        "90/": "92%",
+      },
     },
   },
   plugins: [],
